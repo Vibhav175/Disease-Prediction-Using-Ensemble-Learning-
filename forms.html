@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Ayan Bhowal">
+  <link rel="shortcut icon" href="favicon.png">
+
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+
+  <link href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+  <link rel="stylesheet" href="css/aos.css">
+
+  <link rel="stylesheet" href="css/style.css">
+  <title>Prognosis Plus+&mdash; Your Healthcare Companion</title>
+</head>
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+   
+
+    <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+
+      <div class="container">
+        <div class="row align-items-center">
+
+          <div class="col-11 col-xl-2">
+            <h1 class="mb-0 site-logo"><a href="index.html" class="mb-0">Prognosis Plus+<span class="text-primary">.</span> </a></h1>
+          </div>
+          <div class="col-12 col-md-10 d-none d-xl-block">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+
+              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                <li><a href="/" class="nav-link">Home</a></li>
+               
+                
+                <li class="has-children">
+                  <a href="/" class="nav-link">About</a>
+                  <ul class="dropdown">
+                    <li><a href="/">Specialties</a></li>
+                    <li><a href="/">Our Team</a></li>
+                  </ul>
+                </li>
+                
+                <li><a href="#contact-section" class="nav-link">Contact</a></li>
+                <li><div>
+                    <button class="btn btn-primary btn-md" onclick="window.location.href='forms.html'">Predict Disease</button>
+                  </div></li>
+              </ul>
+            </nav>
+          </div>
+
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4 mb-4">Symptoms of Diseases</h1>
+        <form>
+            <div class="row mb-2">
+                <div class="col-md-6">
+                    <label for="symptomText">Symptom 1</label>
+                </div>
+                <div class="col-md-6">
+                    
+                    <select class="custom-select" id="symptomDropdown">
+                        <option value="">Select a symptom...</option>
+                        <script>
+                            // List of symptoms
+                            var symptoms = [
+                                'back_pain', 'constipation', 'abdominal_pain', 'diarrhoea', 'mild_fever',
+                                'yellow_urine', 'yellowing_of_eyes', 'acute_liver_failure', 'fluid_overload',
+                                'swelling_of_stomach', 'swelled_lymph_nodes', 'malaise',
+                                'blurred_and_distorted_vision', 'phlegm', 'throat_irritation', 'redness_of_eyes',
+                                'sinus_pressure', 'runny_nose', 'congestion', 'chest_pain', 'weakness_in_limbs',
+                                'fast_heart_rate', 'pain_during_bowel_movements', 'pain_in_anal_region',
+                                'bloody_stool', 'irritation_in_anus', 'neck_pain', 'dizziness', 'cramps', 'bruising',
+                                'obesity', 'swollen_legs', 'swollen_blood_vessels', 'puffy_face_and_eyes',
+                                'enlarged_thyroid', 'brittle_nails', 'swollen_extremities', 'excessive_hunger',
+                                'extra_marital_contacts', 'drying_and_tingling_lips', 'slurred_speech', 'knee_pain',
+                                'hip_joint_pain', 'muscle_weakness', 'stiff_neck', 'swelling_joints',
+                                'movement_stiffness', 'spinning_movements', 'loss_of_balance', 'unsteadiness',
+                                'weakness_of_one_body_side', 'loss_of_smell', 'bladder_discomfort',
+                                'foul_smell_of urine', 'continuous_feel_of_urine', 'passage_of gases', 'internal_itching',
+                                'toxic_look_(typhos)', 'depression', 'irritability', 'muscle_pain',
+                                'altered_sensorium', 'red_spots_over_body', 'belly_pain', 'abnormal_menstruation',
+                                'dischromic_patches', 'watering_from_eyes', 'increased_appetite', 'polyuria', 'family_history',
+                                'mucoid_sputum', 'rusty_sputum', 'lack_of_concentration', 'visual_disturbances',
+                                'receiving_blood_transfusion', 'receiving_unsterile_injections', 'coma', 'stomach_bleeding',
+                                'distention_of_abdomen', 'history_of_alcohol_consumption', 'fluid_overload',
+                                'blood_in_sputum', 'prominent_veins_on_calf', 'palpitations', 'painful_walking',
+                                'pus_filled_pimples', 'blackheads', 'scurring', 'skin_peeling', 'silver_like_dusting',
+                                'small_dents_in_nails', 'inflammatory_nails', 'blister', 'red_sore_around_nose',
+                                'yellow_crust_ooze'
+                            ];
+                            
+                            // Generate options for each symptom
+                            symptoms.forEach(function (symptom) {
+                                document.write('<option value="' + symptom + '">' + symptom.replace(/_/g, ' ') + '</option>');
+                            });
+                        </script>
+                    </select>
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="col-md-6">
+                    <label for="symptomText">Symptom 2</label>
+                </div>
+                <div class="col-md-6">
+                   
+                    <select class="custom-select" id="symptomDropdown">
+                        <option value="">Select a symptom...</option>
+                        <script>
+                            // List of symptoms
+                            var symptoms = [
+                                'back_pain', 'constipation', 'abdominal_pain', 'diarrhoea', 'mild_fever',
+                                'yellow_urine', 'yellowing_of_eyes', 'acute_liver_failure', 'fluid_overload',
+                                'swelling_of_stomach', 'swelled_lymph_nodes', 'malaise',
+                                'blurred_and_distorted_vision', 'phlegm', 'throat_irritation', 'redness_of_eyes',
+                                'sinus_pressure', 'runny_nose', 'congestion', 'chest_pain', 'weakness_in_limbs',
+                                'fast_heart_rate', 'pain_during_bowel_movements', 'pain_in_anal_region',
+                                'bloody_stool', 'irritation_in_anus', 'neck_pain', 'dizziness', 'cramps', 'bruising',
+                                'obesity', 'swollen_legs', 'swollen_blood_vessels', 'puffy_face_and_eyes',
+                                'enlarged_thyroid', 'brittle_nails', 'swollen_extremities', 'excessive_hunger',
+                                'extra_marital_contacts', 'drying_and_tingling_lips', 'slurred_speech', 'knee_pain',
+                                'hip_joint_pain', 'muscle_weakness', 'stiff_neck', 'swelling_joints',
+                                'movement_stiffness', 'spinning_movements', 'loss_of_balance', 'unsteadiness',
+                                'weakness_of_one_body_side', 'loss_of_smell', 'bladder_discomfort',
+                                'foul_smell_of urine', 'continuous_feel_of_urine', 'passage_of gases', 'internal_itching',
+                                'toxic_look_(typhos)', 'depression', 'irritability', 'muscle_pain',
+                                'altered_sensorium', 'red_spots_over_body', 'belly_pain', 'abnormal_menstruation',
+                                'dischromic_patches', 'watering_from_eyes', 'increased_appetite', 'polyuria', 'family_history',
+                                'mucoid_sputum', 'rusty_sputum', 'lack_of_concentration', 'visual_disturbances',
+                                'receiving_blood_transfusion', 'receiving_unsterile_injections', 'coma', 'stomach_bleeding',
+                                'distention_of_abdomen', 'history_of_alcohol_consumption', 'fluid_overload',
+                                'blood_in_sputum', 'prominent_veins_on_calf', 'palpitations', 'painful_walking',
+                                'pus_filled_pimples', 'blackheads', 'scurring', 'skin_peeling', 'silver_like_dusting',
+                                'small_dents_in_nails', 'inflammatory_nails', 'blister', 'red_sore_around_nose',
+                                'yellow_crust_ooze'
+                            ];
+                            
+                            // Generate options for each symptom
+                            symptoms.forEach(function (symptom) {
+                                document.write('<option value="' + symptom + '">' + symptom.replace(/_/g, ' ') + '</option>');
+                            });
+                        </script>
+                    </select>
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="col-md-6">
+                    <label for="symptomText">Symptom 3</label>
+                </div>
+                <div class="col-md-6">
+                    
+                    <select class="custom-select" id="symptomDropdown">
+                        <option value="">Select a symptom...</option>
+                        <script>
+                            // List of symptoms
+                            var symptoms = [
+                                'back_pain', 'constipation', 'abdominal_pain', 'diarrhoea', 'mild_fever',
+                                'yellow_urine', 'yellowing_of_eyes', 'acute_liver_failure', 'fluid_overload',
+                                'swelling_of_stomach', 'swelled_lymph_nodes', 'malaise',
+                                'blurred_and_distorted_vision', 'phlegm', 'throat_irritation', 'redness_of_eyes',
+                                'sinus_pressure', 'runny_nose', 'congestion', 'chest_pain', 'weakness_in_limbs',
+                                'fast_heart_rate', 'pain_during_bowel_movements', 'pain_in_anal_region',
+                                'bloody_stool', 'irritation_in_anus', 'neck_pain', 'dizziness', 'cramps', 'bruising',
+                                'obesity', 'swollen_legs', 'swollen_blood_vessels', 'puffy_face_and_eyes',
+                                'enlarged_thyroid', 'brittle_nails', 'swollen_extremities', 'excessive_hunger',
+                                'extra_marital_contacts', 'drying_and_tingling_lips', 'slurred_speech', 'knee_pain',
+                                'hip_joint_pain', 'muscle_weakness', 'stiff_neck', 'swelling_joints',
+                                'movement_stiffness', 'spinning_movements', 'loss_of_balance', 'unsteadiness',
+                                'weakness_of_one_body_side', 'loss_of_smell', 'bladder_discomfort',
+                                'foul_smell_of urine', 'continuous_feel_of_urine', 'passage_of gases', 'internal_itching',
+                                'toxic_look_(typhos)', 'depression', 'irritability', 'muscle_pain',
+                                'altered_sensorium', 'red_spots_over_body', 'belly_pain', 'abnormal_menstruation',
+                                'dischromic_patches', 'watering_from_eyes', 'increased_appetite', 'polyuria', 'family_history',
+                                'mucoid_sputum', 'rusty_sputum', 'lack_of_concentration', 'visual_disturbances',
+                                'receiving_blood_transfusion', 'receiving_unsterile_injections', 'coma', 'stomach_bleeding',
+                                'distention_of_abdomen', 'history_of_alcohol_consumption', 'fluid_overload',
+                                'blood_in_sputum', 'prominent_veins_on_calf', 'palpitations', 'painful_walking',
+                                'pus_filled_pimples', 'blackheads', 'scurring', 'skin_peeling', 'silver_like_dusting',
+                                'small_dents_in_nails', 'inflammatory_nails', 'blister', 'red_sore_around_nose',
+                                'yellow_crust_ooze'
+                            ];
+                            
+                            // Generate options for each symptom
+                            symptoms.forEach(function (symptom) {
+                                document.write('<option value="' + symptom + '">' + symptom.replace(/_/g, ' ') + '</option>');
+                            });
+                        </script>
+                    </select>
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="col-md-6">
+                    <label for="symptomText">Symptom 4</label>
+                </div>
+                <div class="col-md-6">
+                    
+                    <select class="custom-select" id="symptomDropdown">
+                        <option value="">Select a symptom...</option>
+                        <script>
+                            // List of symptoms
+                            var symptoms = [
+                                'back_pain', 'constipation', 'abdominal_pain', 'diarrhoea', 'mild_fever',
+                                'yellow_urine', 'yellowing_of_eyes', 'acute_liver_failure', 'fluid_overload',
+                                'swelling_of_stomach', 'swelled_lymph_nodes', 'malaise',
+                                'blurred_and_distorted_vision', 'phlegm', 'throat_irritation', 'redness_of_eyes',
+                                'sinus_pressure', 'runny_nose', 'congestion', 'chest_pain', 'weakness_in_limbs',
+                                'fast_heart_rate', 'pain_during_bowel_movements', 'pain_in_anal_region',
+                                'bloody_stool', 'irritation_in_anus', 'neck_pain', 'dizziness', 'cramps', 'bruising',
+                                'obesity', 'swollen_legs', 'swollen_blood_vessels', 'puffy_face_and_eyes',
+                                'enlarged_thyroid', 'brittle_nails', 'swollen_extremities', 'excessive_hunger',
+                                'extra_marital_contacts', 'drying_and_tingling_lips', 'slurred_speech', 'knee_pain',
+                                'hip_joint_pain', 'muscle_weakness', 'stiff_neck', 'swelling_joints',
+                                'movement_stiffness', 'spinning_movements', 'loss_of_balance', 'unsteadiness',
+                                'weakness_of_one_body_side', 'loss_of_smell', 'bladder_discomfort',
+                                'foul_smell_of urine', 'continuous_feel_of_urine', 'passage_of gases', 'internal_itching',
+                                'toxic_look_(typhos)', 'depression', 'irritability', 'muscle_pain',
+                                'altered_sensorium', 'red_spots_over_body', 'belly_pain', 'abnormal_menstruation',
+                                'dischromic_patches', 'watering_from_eyes', 'increased_appetite', 'polyuria', 'family_history',
+                                'mucoid_sputum', 'rusty_sputum', 'lack_of_concentration', 'visual_disturbances',
+                                'receiving_blood_transfusion', 'receiving_unsterile_injections', 'coma', 'stomach_bleeding',
+                                'distention_of_abdomen', 'history_of_alcohol_consumption', 'fluid_overload',
+                                'blood_in_sputum', 'prominent_veins_on_calf', 'palpitations', 'painful_walking',
+                                'pus_filled_pimples', 'blackheads', 'scurring', 'skin_peeling', 'silver_like_dusting',
+                                'small_dents_in_nails', 'inflammatory_nails', 'blister', 'red_sore_around_nose',
+                                'yellow_crust_ooze'
+                            ];
+                            
+                            // Generate options for each symptom
+                            symptoms.forEach(function (symptom) {
+                                document.write('<option value="' + symptom + '">' + symptom.replace(/_/g, ' ') + '</option>');
+                            });
+                        </script>
+                    </select>
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="col-md-6">
+                    <label for="symptomText">Symptom 5</label>
+                </div>
+                <div class="col-md-6">
+                    
+                    <select class="custom-select" id="symptomDropdown">
+                        <option value="">Select a symptom...</option>
+                        <script>
+                            // List of symptoms
+                            var symptoms = [
+                                'back_pain', 'constipation', 'abdominal_pain', 'diarrhoea', 'mild_fever',
+                                'yellow_urine', 'yellowing_of_eyes', 'acute_liver_failure', 'fluid_overload',
+                                'swelling_of_stomach', 'swelled_lymph_nodes', 'malaise',
+                                'blurred_and_distorted_vision', 'phlegm', 'throat_irritation', 'redness_of_eyes',
+                                'sinus_pressure', 'runny_nose', 'congestion', 'chest_pain', 'weakness_in_limbs',
+                                'fast_heart_rate', 'pain_during_bowel_movements', 'pain_in_anal_region',
+                                'bloody_stool', 'irritation_in_anus', 'neck_pain', 'dizziness', 'cramps', 'bruising',
+                                'obesity', 'swollen_legs', 'swollen_blood_vessels', 'puffy_face_and_eyes',
+                                'enlarged_thyroid', 'brittle_nails', 'swollen_extremities', 'excessive_hunger',
+                                'extra_marital_contacts', 'drying_and_tingling_lips', 'slurred_speech', 'knee_pain',
+                                'hip_joint_pain', 'muscle_weakness', 'stiff_neck', 'swelling_joints',
+                                'movement_stiffness', 'spinning_movements', 'loss_of_balance', 'unsteadiness',
+                                'weakness_of_one_body_side', 'loss_of_smell', 'bladder_discomfort',
+                                'foul_smell_of urine', 'continuous_feel_of_urine', 'passage_of gases', 'internal_itching',
+                                'toxic_look_(typhos)', 'depression', 'irritability', 'muscle_pain',
+                                'altered_sensorium', 'red_spots_over_body', 'belly_pain', 'abnormal_menstruation',
+                                'dischromic_patches', 'watering_from_eyes', 'increased_appetite', 'polyuria', 'family_history',
+                                'mucoid_sputum', 'rusty_sputum', 'lack_of_concentration', 'visual_disturbances',
+                                'receiving_blood_transfusion', 'receiving_unsterile_injections', 'coma', 'stomach_bleeding',
+                                'distention_of_abdomen', 'history_of_alcohol_consumption', 'fluid_overload',
+                                'blood_in_sputum', 'prominent_veins_on_calf', 'palpitations', 'painful_walking',
+                                'pus_filled_pimples', 'blackheads', 'scurring', 'skin_peeling', 'silver_like_dusting',
+                                'small_dents_in_nails', 'inflammatory_nails', 'blister', 'red_sore_around_nose',
+                                'yellow_crust_ooze'
+                            ];
+                            
+                            // Generate options for each symptom
+                            symptoms.forEach(function (symptom) {
+                                document.write('<option value="' + symptom + '">' + symptom.replace(/_/g, ' ') + '</option>');
+                            });
+                        </script>
+                    </select>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-12 text-right">
+                    <button type="button" class="btn btn-primary btn-md" onclick="">Naive Bayes</button>
+                    <button type="button" class="btn btn-primary btn-md" onclick="">Random Forest</button>
+                    <button type="button" class="btn btn-primary btn-md" onclick="">Decision Tree</button>
+                </div>
+            </div>
+            <div>
+                <button type ="submit "class="btn btn-primary btn-md" onclick="">Predict Disease</button>
+              </div>
+        </form>
+         <!-- Result box to display the predicted disease -->
+    <div class="row mt-4">
+        <div class="col-12">
+            <div id="resultBox" class="alert alert-info">
+                Predicted Disease: <span id="predictedDisease">Unknown</span>
+            </div>
+        </div>
+    </div>
+  </div>
+    </div>
+
+
+    <footer class="site-footer">
+          <div class="row pt-1 mt-5 text-center">
+            <div class="col-md-12">
+              <div class="border-top pt-1">
+                <p> Designed with love by <a href="/">Ayan Bhowal</a>
+                </p>
+              </div>
+            </div>
+
+          </div>
+        
+      </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function predictDisease() {
+            // You can add your disease prediction logic here
+            // For now, let's set a random disease as an example    
+            const diseases = ["Disease A", "Disease B", "Disease C"];
+            const randomDisease = diseases[Math.floor(Math.random() * diseases.length)];
+            
+            // Display the predicted disease in the result box
+            document.getElementById("predictedDisease").textContent = randomDisease;
+        }
+      </script>
+</body>
+</html>
